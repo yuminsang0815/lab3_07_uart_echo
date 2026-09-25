@@ -1,0 +1,10 @@
+RUN C:\iverilog\bin\iverilog.EXE -g2012 -Wall -I C:\Users\a2391\lab3_25_uart_echo\src -I C:\Users\a2391\lab3_25_uart_echo\sim -s tb_uart_echo -o C:\Users\a2391\lab3_25_uart_echo\build\sim\run-75ee8c24d01a4f1b9eda906210e2cc7b\sim.vvp C:\Users\a2391\lab3_25_uart_echo\src\uart.v C:\Users\a2391\lab3_25_uart_echo\src\lab3_uart_echo.v C:\Users\a2391\lab3_25_uart_echo\sim\tb_uart_echo.sv
+
+RUN C:\iverilog\bin\vvp.EXE -N C:\Users\a2391\lab3_25_uart_echo\build\sim\run-75ee8c24d01a4f1b9eda906210e2cc7b\sim.vvp
+VCD info: dumpfile wave.vcd opened for output.
+LAB3_UART_ECHO_PASS checks=3
+C:\Users\a2391\lab3_25_uart_echo\sim\tb_uart_echo.sv:85: $finish called at 9970000 (1ps)
+
+시뮬레이션 실행 완료. 진리표·자기검사·파형으로 회로의 정답 여부를 확인하세요.
+WAVE C:\Users\a2391\lab3_25_uart_echo\build\sim\wave.vcd
+ *  Terminal will be reused by tasks, press any key to close it. 
