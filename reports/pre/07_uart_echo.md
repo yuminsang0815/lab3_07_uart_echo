@@ -57,8 +57,8 @@
 ## 4. 시뮬레이션 결과 및 수정 실험
 
 ### 정상 시뮬레이션 확인
-- **종료 로그**: `LAB3_UART_ECHO_PASS checks=3`, 종료 시각 `9910000 ps (9910 ns)`
-- **파형 분석**:
+- **[종료 로그](../../evidence/07/vscode/simulation.txt)**: `LAB3_UART_ECHO_PASS checks=3`, 종료 시각 `9910000 ps (9910 ns)`
+- **[파형 분석](../../evidence/07/vscode/wave.png)**:
   - `uart_rxd`로 0x41이 인가될 때 Start(0)가 감지된 후 정확히 반주기 뒤에 노이즈 유무를 판단하고, 8클록 주기로 데이터 비트가 샘플링되어 `rx_data`에 래치됨을 확인한다.
   - `rx_valid`가 1클록 펄스로 뜨는 순간 `tx_valid`가 활성화되고, `uart_txd` 신호가 Low(Start)로 떨어지며 동일한 0x41 직렬 비트열을 출력함을 확인한다.
   - 3개 바이트가 순차 처리된 후 `framing_error` 발생 없이 `checks=3`을 달성하고 정상 종료된다.
